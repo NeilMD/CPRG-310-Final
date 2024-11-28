@@ -74,12 +74,26 @@ main {
     flex-grow: 1;
 }
 
+section:not(:first-child) {
+    max-width: 1440px;
+    align-content: center;
+}
+
 span {
     font-family: 'adobe-hebrew', sans-serif;
     font-size: 1.5rem;
 }
 
-img:not(nav a img){
+img:not(nav a img, figure img){
     border-radius: 5px;
     box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+figure {
+    padding: unset;
+    margin: unset;
+}
+
+img {
+    object-fit: cover;
 }

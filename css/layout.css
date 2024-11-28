@@ -38,6 +38,7 @@
   padding: 1rem;
   border-radius: 30px;
   border: 1px solid var(--dark-color);
+  font-size: 1.5rem;
 }
 
 .gap-4 {
@@ -60,6 +61,39 @@
     padding: 4rem;
 }
 
+.plr-6 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+
 .fj-space-around {
     justify-content: space-around;
+}
+.fj-space-evenly {
+    justify-content: space-evenly;
+}
+
+.fj-end {
+    justify-content: end;
+}
+
+.fj-start {
+    justify-content: start;
+}
+
+.al-f-end {
+    align-items: flex-end;
+}
+
+.f-r-reverse {
+    flex-direction: row-reverse;
+}
+
+.fb-50 {
+    flex-basis: 50%;
+}
+
+.fb-30 {
+    flex-basis: 30%;
 }
