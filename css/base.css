@@ -1,0 +1,85 @@
+/* Define global colors */
+:root {
+    --primary-color: #4e80bc;
+    --secondary-color: #2ecc71;
+    --accent-color: #f39c12;
+    --light-color: #ecf0f1;
+    --dark-color: #0a1d2b;
+    
+    --header-bg: #0000002b
+}
+
+* {
+    font-family: "lft-etica", serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* Class to hide the header */
+.hidden-header {
+top: -100px; /* Move header off the top of the screen */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--header-bg), transparent);
+    padding: 0.5rem 3rem;
+    position: fixed; /* Make the header float */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's on top of other content */
+    transition: top 0.3s; /* Smooth hide/show animation */
+  
+}
+
+h3 {
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    align-content: center;
+}
+
+nav ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+
+main {
+    flex-grow: 1;
+}
+
+span {
+    font-family: 'adobe-hebrew', sans-serif;
+    font-size: 1.5rem;
+}
+
+img:not(nav a img){
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
