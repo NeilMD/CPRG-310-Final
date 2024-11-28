@@ -104,3 +104,14 @@ footer#footer-container {
     background: var(--dark-color);
     color: var(--light-color);
 }
+
+footer#footer-container h3 {
+   margin: 2rem 0;
+}
+
+footer#footer-container ul li{
+   text-decoration: none;
+   list-style-type: none;
+   font-size: 1.5rem;
+   font-weight: 100;
+}
