@@ -1,0 +1,65 @@
+#slideshow-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#slideshow-footer {
+   width: 100vw;
+   height: 50vh;
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   background: linear-gradient(to top, #0000009c, transparent);
+   padding: 3rem 2rem;
+}
+
+button {
+    background-color: unset;
+    border: none;
+    color: var(--light-color);
+    font-size: 5rem;
+}
+
+body {
+    background-color: var(--dark-color);
+}
+
+.video-information {
+    color: var(--light-color);
+}
+
+
+h3 {
+    margin: unset;
+    font-weight: 500;
+}
+
+h4 {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+
+h3, h4, span {
+    margin: 0;
+    opacity: 0; /* Initially hidden */
+    animation: slideUp 1s  ease-out forwards 1s;
+}
+
+@keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    animation: none;
+}
+

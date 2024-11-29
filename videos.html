@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video/Drone</title>
+    <link rel="stylesheet" href="https://use.typekit.net/let1pqf.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/videos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+    <script src="./script/initialize.js" defer></script>
+    <script src="./script/videos.js" defer></script>
+</head>
+<body>
+    <header id="header-container"></header>
+    <main>
+        <section class="slideshow-container">
+            <video id="slideshow-video" width="800" height="400" autoplay >
+                <source id="video-source" src="./assets/video-playlist/home_banner.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <footer id="slideshow-footer" class="d-flex">
+                <section class="video-information d-flex flex-column fb-50 fj-end">
+                   <h3 id="video-title">Home Banner</h3>
+                   <h4 id="video-client">WINS</h4>
+                   <span id="video-details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum adipisci impedit itaque quibusdam? Et neque nam qui placeat cum hic consequuntur asperiores! A placeat alias necessitatibus dicta maiores fugit.
+                   </span>
+                </section>
+                <section class="video-actions d-flex fb-50 fj-end al-f-end">
+                  <button id="prev-btn"><i class="fa-solid fa-angle-left"></i></button>
+                  <button id="next-btn"><i class="fa-solid fa-angle-right"></i></button>  
+                </section>
+            </footer>
+        </section>
+    </main>
+    <footer id="footer-container"></footer>
+</body>
+</html>

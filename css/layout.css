@@ -41,6 +41,16 @@
   font-size: 1.5rem;
 }
 
+.button-light {
+    text-decoration: none;
+    color: var(--light-color);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 30px;
+    border: 1px solid var(--light-color);
+    font-size: 1.4rem;
+  }
+
 .gap-4 {
     gap:4rem
 }
@@ -96,4 +106,13 @@
 
 .fb-30 {
     flex-basis: 30%;
+}
+
+.parallax {
+    min-height: 70vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
