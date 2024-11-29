@@ -11,7 +11,7 @@
    bottom: 0px;
    left: 0px;
    background: linear-gradient(to top, #0000009c, transparent);
-   padding: 3rem 2rem;
+   padding: 3rem 4rem;
 }
 
 button {
@@ -29,6 +29,10 @@ body {
     color: var(--light-color);
 }
 
+h2 {
+    font-size: xx-large;
+}
+
 
 h3 {
     margin: unset;
@@ -36,30 +40,35 @@ h3 {
 }
 
 h4 {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     font-size: 2rem;
 }
 
+section.video-information h3 {
+    opacity: 0; 
+    animation: slideUp 1s  ease-out forwards .5s;
+}
 
-h3, h4, span {
-    margin: 0;
-    opacity: 0; /* Initially hidden */
+section.video-information h4 {
+    opacity: 0; 
     animation: slideUp 1s  ease-out forwards 1s;
 }
 
-@keyframes slideUp {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+section.video-information span {
+    opacity: 0; 
+    animation: slideUp 1s  ease-out forwards 1.5s;
+}
+
+.fb-40 {
+    flex-basis: 40%;
 }
 
 .hidden {
     opacity: 0;
     animation: none;
+}
+
+section.modal main img {
+   width: 80vw;
 }
 

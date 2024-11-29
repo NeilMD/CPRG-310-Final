@@ -109,10 +109,14 @@
 }
 
 .parallax {
-    min-height: 70vh;
+    min-height: 90vh;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }

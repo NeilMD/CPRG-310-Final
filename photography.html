@@ -7,17 +7,55 @@
     <link rel="stylesheet" href="https://use.typekit.net/let1pqf.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/module.css">
     <link rel="stylesheet" href="./css/photography.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
     <script src="./script/initialize.js" defer></script>
+    <script src="./script/photography.js" defer></script>
 </head>
 <body>
     <header id="header-container"></header>
     <main>
-        <section class="parallax camera-bg">
+        <section class="parallax camera-bg ">
+            <h2>Photo Gallery</h2>
+        </section>
+        <section id="gallery-section" class="d-flex flex-wrap">
+            <article class="gallery-card" >
+                <img class="gallery" src="./assets/studio.jpg" alt="Night Sparrow Productions Studio">
+                <p class="hover-text">Some Text Here</p>
+            </article>
+            <article class="gallery-card">
+                <img class="gallery" src="./assets/studio.jpg" alt="Night Sparrow Productions Studio" >
+            </article>
+            <article class="gallery-card">
+                <img class="gallery" src="./assets/studio.jpg" alt="Night Sparrow Productions Studio" >
+            </article>
+
+            <article class="gallery-card">
+                <img class="gallery" src="./assets/studio.jpg" alt="Night Sparrow Productions Studio" >
+            </article>
+            <article class="gallery-card">
+                <img class="gallery" src="./assets/studio.jpg" alt="Night Sparrow Productions Studio" >
+            </article>
+            
+        </section>
+        <!-- The Modal -->
+        <section id="myModal" class="modal">
+            <header>
+                <span class="close"><i class="fa-solid fa-xmark"></i></span>
+            </header>
+            <!-- Modal content -->
+            <main class="modal-content">
+                <h3>Night Sparrow Productions Studio</h3>
+                <h4>September 10, 2024</h4>
+                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis quas minus laudantium labore! Laudantium, ipsum distinctio quod exercitationem debitis impedit, quam nobis quas dicta, quidem dolore consequuntur! Repellat, sed veniam?</span>
+                <img src="./assets/studio.jpg" alt="Night Sparrow Productions Studio">
+                 
+                
+               
+            </main>
 
         </section>
-        <section>asd</section>
     </main>
     <footer id="footer-container"></footer>
 </body>
