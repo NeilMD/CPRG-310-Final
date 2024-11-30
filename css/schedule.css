@@ -1,0 +1,15 @@
+#calendar-section {
+    padding: 10rem 5rem;
+}
+
+#calendar-section section {
+    padding: 3rem;
+}
+
+#calendar{
+    flex-basis: 70%;
+}
+
+#calendar-form {
+    flex-basis: 30%;
+}
