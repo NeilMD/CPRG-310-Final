@@ -1,5 +1,3 @@
-let gallery = document.getElementById('gallery-section');
-
 const pics = [
     {
         src: './assets/gallery/camera.jpg',
@@ -19,31 +17,34 @@ const pics = [
         date: 'September 13, 2024',
         details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.'
     },
+    
+    
 ];
 
+let gallery = document.getElementById('gallery-section');
 let load = function (template) {
-    let cards = '';
     for (let pic of pics) {
         let temp = document.createElement('div');
+
         temp.innerHTML = template;
+
+        //Get Picture info
         let img = temp.querySelectorAll('img')[0];
         let hoverText = temp.querySelectorAll('.hover-text')[0];
 
+        //Set Picture info
         img.src = pic.src; 
         hoverText.textContent = pic.title; 
-      
-        cards += temp.innerHTML;
+        
+        //Add click event 
+        let cardElement = temp.querySelector('.gallery-card');
+        cardElement.addEventListener('click', ()=>{
+            openModal(pic);
+            
+        });
+
+        gallery.appendChild(cardElement)
     }
-
-    console.log(cards);
-    gallery.innerHTML = cards;
-
-    // Event delegation for dynamically added gallery cards
-    gallery.addEventListener('click', function(event) {
-        if (event.target.closest('.gallery-card')) {
-            openModal();
-        }
-    });
 }
 
 // Load Gallery Template
@@ -55,20 +56,32 @@ function loadTemplate(templatePath) {
         })
         .catch(error => console.error('Error fetching template:', error));
 }
-
 loadTemplate('./templates/gallery-card.html');
 
+
+
+//Modal section
 let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
+let openModal = function (picData) {
+    
+    let title = document.querySelector(".modal-content h3");
+    let date = document.querySelector(".modal-content h4");
+    let details = document.querySelector(".modal-content span");
+    let img = document.querySelector(".modal-content img");
 
-let openModal = function () {
+    title.innerText = picData.title;
+    date.innerText = picData.date;
+    details.innerText = picData.details;
+    img.src = picData.src;
+
     modal.style.display = "flex";
 }
 
+// Close MOdal
 let closeModal = function () {
     modal.style.display = "none";
 }
-
 span.addEventListener('click', closeModal);
 
 window.onclick = function(event) {

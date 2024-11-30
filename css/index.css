@@ -10,8 +10,11 @@ video {
 
 .section-title {
     transform: rotate(-0.25turn);
+    width: 50px;
     padding: 5rem 0;
     font-size: 1rem;
+    position: sticky;
+    top: 0;
 }
 
 section #call-to-action {
@@ -27,11 +30,11 @@ section #call-to-action {
 }
 
 
-section:nth-of-type(4){
+#highlights {
     text-align: center;
 }
 
-section:nth-of-type(4) video {
+#highlights video {
     max-width: 60vw;
     max-height: 70vh;
     object-fit: cover;
