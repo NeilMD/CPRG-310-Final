@@ -1,5 +1,6 @@
 #calendar-section {
     padding: 10rem 5rem;
+
 }
 
 #calendar-section section {
@@ -12,4 +13,24 @@
 
 #calendar-form {
     flex-basis: 30%;
+    max-height: fit-content;
+    padding: 3.5rem 3.5rem 10rem 3.5rem;
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);   
+}
+
+label {
+    padding: 1rem 0.5rem;
+}
+
+input {
+    margin: 0 0.5rem;
+    width: 40ch;
+}
+
+#calendar-submit {
+    margin-top: 3rem;
+    padding: 1rem 2rem;
 }

@@ -21,7 +21,22 @@
             <section class="d-flex gap-4">
                 <article id='calendar'></article>
                 <aside id="calendar-form">
-                    form
+                    <h4>Set Appointement</h4>
+                    <form class="d-flex flex-column">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="date">Preferred Date:</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label for="time">Preferred Time:</label>
+                        <input type="time" id="time" name="time" required>
+
+                        <button id="calendar-submit" class="button m-auto" type="submit">Submit</button>
+                    </form>
                 </aside>
             </section>
            
