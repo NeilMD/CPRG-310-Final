@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="https://use.typekit.net/let1pqf.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/module.css">
+    <link rel="stylesheet" href="./css/state.css">
     <link rel="stylesheet" href="./css/schedule.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.15/index.global.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2" defer></script>
+    <script src="https://unpkg.com/tippy.js@6" defer></script>
     <!-- <script src="./script/google-calendar.js" ></script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
     <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script> -->
@@ -24,8 +28,12 @@
     <main>
         <section id="calendar-section">
             <h3>Book a Schedule</h3>
+            <section>
+                <span>Select a service and choose a date and time that works best for you.</span>
+            </section>
             <section class="d-flex gap-4">
                 <article id='calendar'></article>
+                
                 <aside id="calendar-form">
                     <h4>Set Appointement</h4>
                     <pre id="content"></pre>
@@ -42,7 +50,7 @@
                         <label for="time">Preferred Time:</label>
                         <input type="time" id="time" name="time" required>
 
-                        <button id="calendar-submit" class="button m-auto" type="submit">Submit</button>
+                        <button id="calendar-submit" class="button m-auto" onclick="addEvent()" type="button">Submit</button>
                     </form>
                 </aside>
             </section>

@@ -59,7 +59,7 @@ async function gisLoaded() {
  */
 function maybeEnableButtons() {
     if (gapiInited && gisInited) {
-        signin();
+        // signin();
         //document.getElementById('authorize_button').style.visibility = 'visible';
     }
 }

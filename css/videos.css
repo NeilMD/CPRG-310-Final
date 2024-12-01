@@ -20,6 +20,7 @@ button {
     color: var(--light-color);
     font-size: 5rem;
     opacity: 70%;
+    transition-property: opacity;
 }
 
 button:hover {

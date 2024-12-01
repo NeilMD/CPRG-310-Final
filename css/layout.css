@@ -49,6 +49,7 @@
     border-radius: 30px;
     border: 1px solid var(--light-color);
     font-size: 1.4rem;
+    transition-property: background-color, color, opacity;
 }
 
 .button-light:hover {
