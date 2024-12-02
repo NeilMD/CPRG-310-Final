@@ -1,0 +1,54 @@
+.audio-bg {
+    background-image: url('../assets/camera.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+}
+
+.audio-bg h2 {
+  position: sticky;
+  top: 0;
+}
+
+section {
+    padding: 10rem 15rem;
+    scroll-snap-align: center;
+}
+
+section:has(#message){
+    display: flex;
+    justify-content: center;
+    background-color: var(--gray-color);
+}
+
+section:has(article) {
+    justify-content: center;
+}
+
+section article {
+    overflow: hidden;
+    text-align: center;
+
+}
+
+figure img {
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    aspect-ratio: 1/1;
+    margin: auto;
+}
+
+h4 {
+    font-size: 2rem;
+    margin: 1rem 0 0 0 ;
+}
+#message {
+    display: inline-block;
+    text-align: center;
+    width: clamp(20vw, 90vw, 95vw);
+    font-size: clamp(1.5rem, 2rem, 3rem);
+
+}
