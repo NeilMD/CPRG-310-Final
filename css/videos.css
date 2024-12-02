@@ -20,12 +20,31 @@
    padding: 3rem 4rem;
 }
 
+#slideshow-footer::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(to top, #000000cc, transparent);
+    transform: translateY(100%);
+    padding: 3rem 4rem;
+    transition: transform 1s ease-in-out;
+ }
+
+#slideshow-footer:hover::after{ 
+    transform: translateY(0);
+}
+
+
 button {
     background-color: unset;
     border: none;
     color: var(--light-color);
     font-size: 5rem;
     opacity: 70%;
+    z-index: 2;
     transition-property: opacity;
 }
 
@@ -39,6 +58,7 @@ body {
 
 .video-information {
     color: var(--light-color);
+    z-index: 2;
 }
 
 h2 {

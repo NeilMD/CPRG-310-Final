@@ -93,6 +93,11 @@ main {
 
 section:not(:first-child) {
     align-content: center;
+    max-width: 100vw;
+}
+
+section article:nth-of-type(2) {
+    overflow: hidden;
 }
 
 span {
