@@ -188,7 +188,19 @@ async function addEventGoogle(data) {
         'resource': event
       });
 
-      request.execute(function(event) {
-        calendar.refetchEvents()
-      });
+      try {
+        request.execute(function(event) {
+            calendar.refetchEvents();
+            content.innerText = 'You have successfully set an appointment!';
+            document.getElementById("name").value = '';
+            document.getElementById("email").value = '';
+            document.getElementById("date").value = '';
+            document.getElementById("time").value = '';
+            document.getElementById("services").value = '#';
+
+          })
+      }catch(err){
+        console.log('schedule')
+      }
+    
 }

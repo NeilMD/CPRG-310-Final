@@ -19,6 +19,7 @@ const SCOPES = 'https://www.googleapis.com/auth/calendar.events';
 let tokenClient;
 let gapiInited = false;
 // let gisInited = false;
+let elContent = document.getElementById('content');
 
 // document.getElementById('authorize_button').style.visibility = 'hidden';
 // document.getElementById('signout_button').style.visibility = 'hidden';
@@ -71,20 +72,30 @@ function maybeEnableButtons() {
  */
 function signin() {
     tokenClient.callback = async (resp) => {
+        
         if (resp.error !== undefined) {
-        throw (resp);
+            
+            throw (resp);
+            elContent.innerText = 'You must log in with an approved account to schedule an event in with Night Sparrow Production!';
+            elContent.style.color = 'indianred'
         }
+        elContent.innerText = '';
         // await listUpcomingEvents();
     };
-    // console.log(gapi)
-    if (gapi.client.getToken() === null) {
-        // Prompt the user to select a Google Account and ask for consent to share their data
-        // when establishing a new session.
-        tokenClient.requestAccessToken({prompt: 'consent'});
-    } else {
-        // Skip display of account chooser and consent dialog for an existing session.
-        tokenClient.requestAccessToken({prompt: ''});
+    try {
+        if (gapi.client.getToken() === null) {
+            // Prompt the user to select a Google Account and ask for consent to share their data
+            // when establishing a new session.
+            tokenClient.requestAccessToken({prompt: 'consent'});
+        } else {
+            // Skip display of account chooser and consent dialog for an existing session.
+            tokenClient.requestAccessToken({prompt: ''});
+        }
+    }catch(err) {
+        console.log("Signin")
     }
+    
+  
 }
 
 /**
