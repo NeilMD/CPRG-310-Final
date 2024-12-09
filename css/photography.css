@@ -5,9 +5,23 @@
     justify-content: center;
     color: white;
     font-size: 5rem;
+    background-size: cover;
+}
+
+.camera-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  background:transparent; /* Semi-transparent overlay */
+  backdrop-filter: blur(3px); 
+  height: 100%;
+  width: 100%;
 }
 
 .camera-bg h2 {
+  z-index: 100;
   position: sticky;
   top: 0;
 }

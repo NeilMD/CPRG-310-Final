@@ -23,15 +23,28 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100vh;
     margin: 0;
+    overflow-x: hidden;
     background-color: var(--light-color);
     color: var(--dark-color);
+    position: relative;
+}
+
+main {
+    flex-grow: 1;
+    width: clamp(300px, 100%, 1440px);
+
+    section:not(:nth-of-type(1)){
+        margin: 4rem 10rem;
+        
+    }
 }
 
 /* Class to hide the header */
 .hidden-header {
-top: -100px; /* Move header off the top of the screen */
+    top: -100px; /* Move header off the top of the screen */
 }
 
 nav {
@@ -48,10 +61,50 @@ nav {
     transition: top 0.3s; /* Smooth hide/show animation */
   
 }
-
+/* 
 h3 {
     font-size: 4rem;
     font-weight: 100;
+} */
+
+h1, h2, h3, h4, h5{
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 600;
+    letter-spacing: -4%; 
+    line-height: 1.2; 
+}
+
+h2 {
+    font-size: 4.5rem; 
+    font-weight: 400;
+    letter-spacing: -2%;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 3rem; 
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.35;
+}
+
+h4 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+}
+
+h5 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
 }
 
 nav ul {
@@ -87,10 +140,6 @@ nav ul li a:not(.button-light):hover::after {
     width: 100%; /* Full underline when hovered */
 }
 
-main {
-    flex-grow: 1;
-}
-
 section:not(:first-child) {
     align-content: center;
     max-width: 100vw;
@@ -116,6 +165,7 @@ img {
 
 footer#footer-container {
     padding: 2rem 4rem;
+    width: 100%;
     background: var(--dark-color);
     color: var(--light-color);
 }
@@ -129,4 +179,31 @@ footer#footer-container ul li{
    list-style-type: none;
    font-size: 1.5rem;
    font-weight: 100;
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 1034px) {
+    main {
+        section:not(:nth-of-type(1)) {
+          margin: 0;
+        }
+      }
+
+    h1, h2, h3, h4, h5 {
+      font-size: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        section:not(:nth-of-type(1)) {
+          margin: 0;
+        }
+      }
+
+    h1, h2, h3, h4, h5 {
+      font-size: 1.7rem;
+    }
+    
 }

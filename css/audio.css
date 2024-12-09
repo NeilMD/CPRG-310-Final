@@ -12,7 +12,7 @@
   top: 0;
 }
 
-section {
+section:not(section:nth-of-type(1)) {
     padding: 10rem 15rem;
     scroll-snap-align: center;
 }
@@ -20,7 +20,6 @@ section {
 section:has(#message){
     display: flex;
     justify-content: center;
-    background-color: var(--gray-color);
 }
 
 section:has(article) {
@@ -39,6 +38,12 @@ figure img {
     border-radius: 5px;
     aspect-ratio: 1/1;
     margin: auto;
+}
+
+h2 {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
 }
 
 h4 {

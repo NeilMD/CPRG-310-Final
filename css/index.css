@@ -9,45 +9,71 @@ video {
 }
 
 #project h3:nth-of-type(1) {
-    text-align: center;
     margin-top: unset;
 }
 
-.section-title {
+#project section:nth-of-type(2) {
+    flex-wrap: wrap;
+}
+
+span.section-title {
     transform: rotate(-0.25turn);
-    width: 50px;
+    width: fit-content;
     padding: 5rem 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     position: sticky;
+    z-index: 1000;
     top: 0;
 }
-
-.card-message {
-    width: 40%;
-}
-
 
 #highlights {
     text-align: center;
 }
 
 #highlights video {
-    max-width: 60vw;
-    max-height: 70vh;
+    max-width: 60%;
+    max-height: 70%;
     object-fit: cover;
 }
 
-.card-container {
-    width: 80vw;
-    max-width: 1440px;
+section#who-we-are main {
+    padding: 4rem;
 }
 
-.fb-50 {
-    flex-basis: 50%;
+section #call-to-action {
+    display: block;
+    padding: 5rem 10rem;
+    font-size: 6rem;
+    font-weight: 100;
+    height: fit-content;
+    transition: 
+        background-color 0.4s ease-in-out,
+        color 0.4s ease-in-out;
 }
 
 #our-focus {
     margin-bottom: 10rem;
+}
+
+#our-studio{
+    position: relative;
+}
+
+#studio-content {
+    width: calc(100% - 50px);
+    align-items: center;
+}
+
+#studio-img {
+    text-align: center;
+}
+
+#studio-img img {
+    width: clamp(300px, 80%, 600px);
+}
+
+#studio-message {
+    width: 40%;
 }
 
 img:not(nav a img, #footer-logo){
@@ -59,25 +85,11 @@ img:not(nav a img, #footer-logo){
 
 }
 
-img:not(nav a img, #footer-logo):hover{
-    border-radius: 5%;
-    transform: translate3d(0, -10px, 0 );
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-}
-
-span {
-    text-shadow: none;
-    transition: text-shadow 0.4s ease-in-out;
-}
-
-span:hover {
-    text-shadow: 0.5px 0.5px #4e7fbc9a;
-}
-
 /* ANIMATION */
 .past-img {
     opacity: 0;
     transition: opacity 2s ease-in-out;
+    
 }
 
 .past-img-animation:nth-of-type(1) {
@@ -94,89 +106,14 @@ span:hover {
     opacity: 1;
 }
 
-.from-left h3,
-.from-left span {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition-property: opacity, transform;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-    
+.past-img span {
+    width: 300px;
+    margin-top: 1rem;
+    display: inline-block;
 }
 
-.from-left footer {
-    opacity: 0;
-    transform: translateX(0);
-    transition-property: opacity;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out
-}
-
-.from-left h3 {
-    transition-delay: 0.2s; 
-}
-
-.from-left span {
-    transition-delay: 1s; 
-}
-
-.from-left footer {
-    transition-delay: 1.5s; 
-}
-
-.from-right h3,
-.from-right span {
-    opacity: 0;
-    transform: translateX(100%);
-    transition-property: opacity, transform;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out
-}
-
-.from-right footer{
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out
-}
-
-.from-right h3 {
-    transition-delay: 0.2s;
-}
-
-.from-right span {
-    transition-delay: 1s;
-}
-
-.from-right footer{
-    transition-delay: 1.5s;
-}
-
-.right-animate, 
-.from-right.right-animate h3,
-.from-right.right-animate span,
-.left-animate,
-.from-left.left-animate h3,
-.from-left.left-animate span {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.from-left.left-animate footer,
-.from-right.right-animate footer {
-    opacity: 1;
-}
-
-
-section #call-to-action {
-    display: block;
-    padding: 5rem 15rem;
-    font-size: 6rem;
-    font-weight: 100;
-    height: 50vh;
-    
-    transition: background-color 0.4s ease-in-out,
-    color 0.4s ease-in-out;
+.focus-header:has(img) {
+    text-align: center;
 }
 
 .cta-animate {
@@ -184,6 +121,107 @@ section #call-to-action {
     color: white;
     
 }
+
 .cta-animate strong {
     color: indianred;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1034px) {  
+    section#who-we-are main {
+        padding: 0;
+    }
+
+    section #call-to-action {
+        padding: 2rem;
+        font-size: 2rem;
+    }
+
+    #studio-content {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 2rem;
+        width: 100%;
+    }
+
+    #studio-message{
+        width: 300px;
+    }
+
+    #highlights video {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    #past-work {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 0 4rem;
+    }
+
+    .focus-wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .focus-wrapper img {
+        width: 100%;
+    }
+
+
+    figure img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* RESPONSIVE FOR PHONE */
+@media screen and (max-width: 480px) {
+    section#who-we-are main {
+        padding: 0;
+    }
+
+    section #call-to-action {
+        padding: 2rem;
+        font-size: 2rem;
+        margin: 0 4rem;
+    }
+
+    #studio-content {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #studio-message{
+        width: 300px;
+    }
+
+    #highlights video {
+        width: 300px;
+        height: 200px;
+    }
+
+    #past-work {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .focus-wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .focus-wrapper img {
+        width: 100%;
+    }
+
+
+    figure img {
+        width: 300px;
+        height: 300px;
+    }
 }
