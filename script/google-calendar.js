@@ -1,3 +1,5 @@
+// GOOGLE CALENDAR 
+
 /* exported gapiLoaded */
 /* exported gisLoaded */
 /* exported handleAuthClick */
@@ -12,7 +14,7 @@ const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/
 
 // Authorization scopes required by the API; multiple scopes can be
 // included, separated by spaces.
-const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
+const SCOPES = 'https://www.googleapis.com/auth/calendar.events';
 
 let tokenClient;
 let gapiInited = false;
@@ -72,9 +74,9 @@ function signin() {
         if (resp.error !== undefined) {
         throw (resp);
         }
-        await listUpcomingEvents();
+        // await listUpcomingEvents();
     };
-    console.log(gapi)
+    // console.log(gapi)
     if (gapi.client.getToken() === null) {
         // Prompt the user to select a Google Account and ask for consent to share their data
         // when establishing a new session.

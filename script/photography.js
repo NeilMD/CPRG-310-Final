@@ -1,6 +1,6 @@
 const pics = [
     {
-        src: './assets/gallery/camera.jpg',
+        src: './assets/gallery/studio.jpg',
         title: 'Home Banner',
         date: 'September 10, 2024',
         details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum adipisci impedit itaque quibusdam?'
@@ -9,6 +9,18 @@ const pics = [
         src: './assets/gallery/studio.jpg',
         title: 'Moneky',
         date: 'September 11, 2024',
+        details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.'
+    },
+    {
+        src: './assets/gallery/monkey.jpg',
+        title: 'Monkeyyyy',
+        date: 'September 13, 2024',
+        details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.'
+    },
+    {
+        src: './assets/gallery/monkey.jpg',
+        title: 'Monkeyyyy',
+        date: 'September 13, 2024',
         details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.'
     },
     {
@@ -43,7 +55,7 @@ let load = function (template) {
             
         });
 
-        gallery.appendChild(cardElement)
+        gallery.insertAdjacentElement('beforeend',cardElement)
     }
 }
 

@@ -67,33 +67,6 @@
     align-items: flex-end;
 }
 
-.button {
-  text-decoration: none;
-  color: var(--dark-color);
-  width: fit-content;
-  padding: 1rem;
-  border-radius: 30px;
-  border: 1px solid var(--dark-color);
-  font-size: 1.5rem;
-}
-
-.button-light {
-    text-decoration: none;
-    color: var(--light-color);
-    width: fit-content;
-    padding: 1rem;
-    border-radius: 30px;
-    border: 1px solid var(--light-color);
-    font-size: 1.4rem;
-    transition-property: background-color, color, opacity;
-}
-
-.button-light:hover {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-    opacity: 90%;
-}
-
 .gap-4 {
     gap:4rem
 }
