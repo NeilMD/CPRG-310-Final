@@ -26,9 +26,6 @@ let calendar = new FullCalendar.Calendar(calendarEl, {
   });
 calendar.render();
 
-
-
-// Validation
 // Validation function
 function validateForm() {
     const name = document.getElementById('name');

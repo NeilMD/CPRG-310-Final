@@ -37,7 +37,7 @@ main {
     width: clamp(300px, 100%, 1440px);
 
     section:not(:nth-of-type(1), #myModal){
-        margin: 4rem 10rem;
+        margin: 4rem 6rem;
         
     }
 }

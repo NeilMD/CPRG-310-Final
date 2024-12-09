@@ -47,15 +47,24 @@ span.section-title {
     width: clamp(300px, 80%, 800px);
 }
 
+section#project section#past-work {
+    margin: 4rem 6rem;
+}
+
 section#who-we-are main {
     padding: 4rem;
+}
+
+section#who-we-are h3 {
+    font-size: 4rem;
+    font-weight: 700;
 }
 
 section #call-to-action {
     display: block;
     padding: 5rem 10rem;
     font-size: 6rem;
-    font-weight: 100;
+    font-weight: 400;
     height: fit-content;
     transition: 
         background-color 0.4s ease-in-out,
@@ -98,7 +107,10 @@ img:not(nav a img, #footer-logo){
 
 /* ANIMATION */
 .past-img {
+    flex-grow: 1;
+    min-width: 300px;
     opacity: 0;
+    text-align: center;
     transition: opacity 2s ease-in-out;
     
 }
@@ -123,8 +135,22 @@ img:not(nav a img, #footer-logo){
     display: inline-block;
 }
 
+.focus-wrapper {
+   align-items: center;
+}
+
 .focus-header:has(img) {
     text-align: center;
+}
+
+.focus-header {
+    width: 100%;
+}
+
+.focus-header img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .cta-animate {
@@ -171,6 +197,7 @@ img:not(nav a img, #footer-logo){
         justify-content: center;
         text-align: center;
         padding: 0 4rem;
+        gap: 2rem;
     }
 
     .focus-wrapper {
