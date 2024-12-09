@@ -5,14 +5,14 @@
 }
 
 #slideshow-video {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     object-fit: cover;
 }
 
 #slideshow-footer {
-   width: 100vw;
-   height: 50vh;
+   width: 100%;
+   height: 40vh;
    position: absolute;
    bottom: 0px;
    left: 0px;
@@ -52,9 +52,6 @@ button:hover {
     opacity: 100%;
 }
 
-body {
-    background-color: var(--dark-color);
-}
 
 .video-information {
     color: var(--light-color);
@@ -72,23 +69,26 @@ h3 {
 }
 
 h4 {
-    margin: 1.5rem 0;
+    margin: 0.8rem 0;
     font-size: 2rem;
     font-weight: 300;
 }
 
-section.video-information h3 {
+#video-title {
+    font-weight: 700;
     opacity: 0; 
     animation: slideUp 1s  ease-out forwards .5s;
 }
 
-section.video-information h4 {
+#video-client {
+    font-weight: 600;
     opacity: 0; 
     animation: slideUp 1s  ease-out forwards 1s;
 }
 
-section.video-information span {
+#video-details {
     opacity: 0; 
+    font-weight: 500;
     animation: slideUp 1s  ease-out forwards 1.5s;
 }
 
