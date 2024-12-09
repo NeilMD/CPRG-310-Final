@@ -1,5 +1,3 @@
-// GOOGLE CALENDAR 
-
 /* exported gapiLoaded */
 /* exported gisLoaded */
 /* exported handleAuthClick */

@@ -1,9 +1,9 @@
 const videos = [
     {
-      src: './assets/video-playlist/home_banner.mp4',
-      title: 'Home Banner',
-      client: 'WINS',
-      details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum adipisci impedit itaque quibusdam?'
+      src: './assets/video-playlist/drone.mp4',
+      title: 'Drone/Video',
+      client: 'Fotage from Calgary',
+      details: 'At Night Sparrow Productions, we specialize in creating videos that inspire, inform, and connect. From nonprofit campaigns to real estate listings and creative commercials, our video and drone services deliver stunning visuals that elevate your brand and tell your story.'
     },
     {
       src: './assets/video-playlist/test1.mp4',

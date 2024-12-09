@@ -1,5 +1,4 @@
 // Your Google API Key and the Calendar ID
- //const API_KEY = 'AIzaSyCWLfqXiZ_DCeUDGYbx2HQyy1JzwW83Kps';  // Replace with your actual API key
 const CALENDAR_ID = 'aws.neilcapistrano@gmail.com'; // Replace with your Calendar ID
 
 // Calendar
@@ -172,7 +171,7 @@ async function addEventGoogle(data) {
         ],
         'attendees': [
           {'email': `${email}`},
-          {'email': 'sbrin@example.com'}
+          {'email': 'neilcydric.capistrano@edu.sait.ca'}
         ],
         'reminders': {
           'useDefault': false,
