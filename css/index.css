@@ -28,12 +28,22 @@ span.section-title {
 
 #highlights {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#highlights video {
+#highlights iframe {
     max-width: 60%;
     max-height: 70%;
     object-fit: cover;
+}
+
+#latest-span {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    display: block;
+    width: clamp(300px, 80%, 800px);
 }
 
 section#who-we-are main {
