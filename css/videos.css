@@ -101,3 +101,25 @@ section.video-information span {
     animation: none;
 }
 
+@media screen and (min-width: 480px) and (max-width: 1034px) {  
+    footer#slideshow-footer {
+        height: fit-content;
+        height: 30vh;
+    }
+}
+
+/* RESPONSIVE FOR PHONE */
+@media screen and (max-width: 480px) {
+    footer#slideshow-footer {
+       flex-direction: column;
+       flex-wrap: wrap;
+       height: fit-content;
+       background: linear-gradient(to top, #000000f5, #00000005);
+    }
+    .video-actions {
+        height: fit-content;
+        justify-content: space-between;
+        font-size: 4rem;
+    }
+}
+
