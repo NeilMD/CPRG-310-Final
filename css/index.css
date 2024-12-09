@@ -21,7 +21,8 @@ span.section-title {
     transform: rotate(-0.25turn);
     width: fit-content;
     padding: 5rem 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 100;
     position: sticky;
     z-index: 1000;
     top: 0;
@@ -85,7 +86,7 @@ section #call-to-action {
 }
 
 #studio-img {
-    text-align: center;
+    text-align: end;
 }
 
 #studio-img img {
@@ -157,6 +158,18 @@ img:not(nav a img, #footer-logo){
     background-color: var(--dark-color);
     color: white;
     
+}
+
+.focus-number {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.focus-content header h3,
+.focus-header h3 {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
 }
 
 .cta-animate strong {
